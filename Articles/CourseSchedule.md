@@ -1,7 +1,3 @@
-# Challenge
-
-## ARTICLES
-
 [Home](../README.md)
 
 **Playing with objects**
