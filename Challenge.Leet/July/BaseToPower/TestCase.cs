@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Challenge.July.BaseToPower
+namespace Challenge.Leet.July.BaseToPower
 {
     public class TestCase
     {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Challenge.July.BaseToPower
+namespace Challenge.Leet.July.BaseToPower
 {
     /// <summary>
     /// 
@@ -43,18 +43,20 @@ namespace Challenge.July.BaseToPower
     {
         public double Power(double x, int n)
         {
-            double r = 1.0;
-            int p = n;
-            while (p != 0)
+            double result = 1.0;
+            int power = n;
+            while (power != 0)
             {
-                if ((p & 1) == 1)
+                if ((power & 1) == 1)
                 {
-                    r *= x;
+                    result *= x;
                 }
-                p /= 2;
+
+                power /= 2;
                 x *= x;
             }
-            return n < 0 ? 1 / r : r;
+
+            return n < 0 ? 1 / result : result;
         }
     }
 }

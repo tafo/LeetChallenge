@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Challenge.July.MostFrequentElements
+namespace Challenge.Leet.July.MostFrequentElements
 {
     /// <summary>
     /// 

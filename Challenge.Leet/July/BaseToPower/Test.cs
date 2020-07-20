@@ -3,7 +3,7 @@ using System.Linq;
 using FluentAssertions;
 using Xunit;
 
-namespace Challenge.July.BaseToPower
+namespace Challenge.Leet.July.BaseToPower
 {
     public class Test
     {

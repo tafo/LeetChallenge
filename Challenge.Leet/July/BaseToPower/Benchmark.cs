@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
 
-namespace Challenge.July.BaseToPower
+namespace Challenge.Leet.July.BaseToPower
 {
     public class Benchmark
     {

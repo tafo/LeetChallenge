@@ -3,7 +3,7 @@ using System.Linq;
 using FluentAssertions;
 using Xunit;
 
-namespace Challenge.July.AddBinary
+namespace Challenge.Leet.July.AddBinary
 {
     public class Test
     {

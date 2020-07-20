@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Challenge.July.MostFrequentElements
+namespace Challenge.Leet.July.MostFrequentElements
 {
     public class TestCase
     {

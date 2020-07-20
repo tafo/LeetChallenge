@@ -4,7 +4,7 @@ using System.Linq;
 using FluentAssertions;
 using Xunit;
 
-namespace Challenge.July.MostFrequentElements
+namespace Challenge.Leet.July.MostFrequentElements
 {
     public class Test
     {
@@ -16,9 +16,9 @@ namespace Challenge.July.MostFrequentElements
             Solution = new Solution();
             TestCases = new List<TestCase>
             {
-                new TestCase(Enumerable.Range(-11, 22).SelectMany(Enumerable.Repeat).Mix().ToArray(), 10),
-                new TestCase(Enumerable.Range(-101, 202).SelectMany(Enumerable.Repeat).Mix().ToArray(), 10),
-                new TestCase(Enumerable.Range(-1001, 2002).SelectMany(Enumerable.Repeat).Mix().ToArray(), 10),
+                new TestCase(Enumerable.ToArray<int>(Enumerable.Range(-11, 22).SelectMany(Enumerable.Repeat).Mix()), 10),
+                new TestCase(Enumerable.ToArray<int>(Enumerable.Range(-101, 202).SelectMany(Enumerable.Repeat).Mix()), 10),
+                new TestCase(Enumerable.ToArray<int>(Enumerable.Range(-1001, 2002).SelectMany(Enumerable.Repeat).Mix()), 10),
             };
         }
 

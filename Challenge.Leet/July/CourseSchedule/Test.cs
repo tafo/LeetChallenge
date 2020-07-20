@@ -7,7 +7,7 @@ using FluentAssertions;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace Challenge.July.CourseSchedule
+namespace Challenge.Leet.July.CourseSchedule
 {
     public class Test
     {

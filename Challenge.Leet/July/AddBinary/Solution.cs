@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace Challenge.July.AddBinary
+namespace Challenge.Leet.July.AddBinary
 {
     /// <summary>
     ///

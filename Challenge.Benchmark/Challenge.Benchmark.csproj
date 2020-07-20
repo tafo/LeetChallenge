@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Challenge\Challenge.csproj" />
+    <ProjectReference Include="..\Challenge.Leet\Challenge.Leet.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@ namespace Challenge.Benchmark
     {
         private static void Main()
         {
-            BenchmarkRunner.Run(typeof(July.BaseToPower.Solution).Assembly);
+            BenchmarkRunner.Run(typeof(Leet.July.BaseToPower.Solution).Assembly);
             Console.ReadLine();
         }
     }

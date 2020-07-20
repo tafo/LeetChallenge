@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Challenge.July.CourseSchedule
+namespace Challenge.Leet.July.CourseSchedule
 {
     public class TestCase
     {

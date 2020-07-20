@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Challenge.July.AddBinary
+namespace Challenge.Leet.July.AddBinary
 {
     public class TestCase
     {
