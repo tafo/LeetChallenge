@@ -4,7 +4,6 @@
 
 ```csharp
 "Closer to real life?" 
-for
 "Extensible?"
 ```
 
