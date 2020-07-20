@@ -236,7 +236,5 @@ if (Prerequisites.Any(x => PrerequisiteTo.Contains(x.Key)))
 **Return**
 
 ```csharp
-"Could not find the object-comparison hashtag"
-	"Dear LeetCoders?"
 "I am open to any kind of feedback || Void"
 ```
