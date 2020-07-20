@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Challenge.Leet.July.CourseSchedule
 {
-    public class Test
+    public class Test : Solution
     {
         public static TestCase GetTest(int courseCount, int preCount)
         {
@@ -53,40 +53,30 @@ namespace Challenge.Leet.July.CourseSchedule
         [Fact]
         public void Check()
         {
-            {
-                var test = new TestCase(0);
-                Check(test, new Solution().RunArray(test.CourseCount, Array.Empty<int[]>()));
-            }
-            {
-                var test = new TestCase(1);
-                Check(test, new Solution().RunArray(test.CourseCount, Array.Empty<int[]>()));
-            }
-            {
-                var test = new TestCase(2).Add(0, 1);
-                Check(test, new Solution().RunArray(test.CourseCount, test.Prerequisites));
-            }
-            {
-                var test = new TestCase(3).Add(0, 1).Add(1, 2);
-                Check(test, new Solution().RunArray(test.CourseCount, test.Prerequisites));
-            }
-            {
-                var test = new TestCase(3).Add(0, 1).Add(1, 2).Add(2, 0);
-                Check(test, new Solution().RunArray(test.CourseCount, test.Prerequisites));
-            }
-            {
-                var data = File.ReadAllText($"{Directory.GetCurrentDirectory()}/July/CourseSchedule/Data/pres.json");
-                var prerequisites = JsonConvert.DeserializeObject<int[][]>(data);
-                var test = new TestCase(2000);
-                foreach (var prerequisite in prerequisites)
-                {
-                    test.Add(prerequisite[0], prerequisite[1]);
-                }
+            Validate(new TestCase(0), RunArray(0, Array.Empty<int[]>()));
+            Validate(new TestCase(1), RunArray(1, Array.Empty<int[]>()));
 
-                Check(test, new Solution().RunObject(test.CourseCount, test.Prerequisites));
+            var test = new TestCase(2).Add(0, 1);
+            Validate(test, RunArray(test.CourseCount, test.Prerequisites));
+
+            test = new TestCase(3).Add(0, 1).Add(1, 2);
+            Validate(test, RunArray(test.CourseCount, test.Prerequisites));
+
+            test = new TestCase(3).Add(0, 1).Add(1, 2).Add(2, 0);
+            Validate(test, RunArray(test.CourseCount, test.Prerequisites));
+
+            var data = File.ReadAllText($"{Directory.GetCurrentDirectory()}/July/CourseSchedule/Data/pres.json");
+            var prerequisites = JsonConvert.DeserializeObject<int[][]>(data);
+            test = new TestCase(2000);
+            foreach (var prerequisite in prerequisites)
+            {
+                test.Add(prerequisite[0], prerequisite[1]);
             }
+
+            Validate(test, RunObject(test.CourseCount, test.Prerequisites));
         }
 
-        public static void Check(TestCase test, int[] result)
+        private static void Validate(TestCase test, int[] result)
         {
             if (test.Expectation != null)
             {
@@ -120,29 +110,29 @@ namespace Challenge.Leet.July.CourseSchedule
                 {
                     timer.Reset();
                     timer.Start();
-                    var result = new Solution().RunObject(test.CourseCount, test.Prerequisites);
+                    var result = RunObject(test.CourseCount, test.Prerequisites);
                     timer.Stop();
                     Debug.WriteLine($"Object = {timer.ElapsedTicks}");
                     timer.Reset();
-                    Check(test, result);
+                    Validate(test, result);
                 }
                 {
                     timer.Reset();
                     timer.Start();
-                    var result = new Solution().RunArray(test.CourseCount, test.Prerequisites);
+                    var result = RunArray(test.CourseCount, test.Prerequisites);
                     timer.Stop();
                     Debug.WriteLine($"Array = {timer.ElapsedTicks}");
                     timer.Reset();
-                    Check(test, result);
+                    Validate(test, result);
                 }
                 {
                     timer.Reset();
                     timer.Start();
-                    var result = new Solution().RunSortedList(test.CourseCount, test.Prerequisites);
+                    var result = RunSortedList(test.CourseCount, test.Prerequisites);
                     timer.Stop();
                     Debug.WriteLine($"Dictionary = {timer.ElapsedTicks}");
                     timer.Reset();
-                    Check(test, result);
+                    Validate(test, result);
                 }
             }
         }
