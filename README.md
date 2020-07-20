@@ -2,4 +2,4 @@
 
 ## ARTICLES
 
-[Course Schedule](Artices/CourseSchedule.md)
+[Course Schedule](ArticLes/CourseSchedule.md)
