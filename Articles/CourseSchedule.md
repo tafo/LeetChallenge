@@ -3,9 +3,9 @@
 **Playing with objects**
 
 ```csharp
-	"Closer to real life?" 
-	for
-	"Extensible?"
+"Closer to real life?" 
+for
+"Extensible?"
 ```
 
 **A solution in a few lines, but ...**
