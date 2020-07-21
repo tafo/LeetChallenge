@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Xunit;
 
-namespace Challenge.Leet.Secret.RemoveLinkedListNodes
+namespace Challenge.Leet.July.RemoveLinkedListNodes
 {
     public class Test : Solution
     {

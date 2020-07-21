@@ -1,4 +1,4 @@
-﻿namespace Challenge.Leet.Secret.RemoveLinkedListNodes
+﻿namespace Challenge.Leet.July.RemoveLinkedListNodes
 {
     /** 
  * Definition for singly-linked list.

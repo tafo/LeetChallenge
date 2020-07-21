@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Challenge.Leet.Secret.RemoveLinkedListNodes
+namespace Challenge.Leet.July.RemoveLinkedListNodes
 {
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public class ListNode

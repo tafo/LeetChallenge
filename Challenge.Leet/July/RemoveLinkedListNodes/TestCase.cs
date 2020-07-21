@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Challenge.Leet.Secret.RemoveLinkedListNodes
+namespace Challenge.Leet.July.RemoveLinkedListNodes
 {
     public class TestCase
     {
