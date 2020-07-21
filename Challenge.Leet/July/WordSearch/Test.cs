@@ -24,15 +24,15 @@ namespace Challenge.Leet.July.WordSearch
                 'W', 'O', 'R',
                 'L', 'D', 'K',
                 'X', 'Y', 'Z');
-            Solution.Exist(Board.Table, "DO").Should().BeTrue();
-            Solution.Exist(Board.Table, "OR").Should().BeTrue();
-            Solution.Exist(Board.Table, "OLD").Should().BeFalse();
-            Solution.Exist(Board.Table, "ROW").Should().BeTrue();
-            Solution.Exist(Board.Table, "LOW").Should().BeFalse();
-            Solution.Exist(Board.Table, "WORD").Should().BeFalse();
-            Solution.Exist(Board.Table, "WORK").Should().BeTrue();
-            Solution.Exist(Board.Table, "WOOD").Should().BeFalse();
-            Solution.Exist(Board.Table, "WORLD").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "DO").Should().BeTrue();
+            Solution.Exist(Board.Matrix, "OR").Should().BeTrue();
+            Solution.Exist(Board.Matrix, "OLD").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "ROW").Should().BeTrue();
+            Solution.Exist(Board.Matrix, "LOW").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "WORD").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "WORK").Should().BeTrue();
+            Solution.Exist(Board.Matrix, "WOOD").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "WORLD").Should().BeFalse();
         }
         
         [Fact]
@@ -43,7 +43,7 @@ namespace Challenge.Leet.July.WordSearch
                 'A', 'B', 'C', 'E',
                 'X', 'F', 'C', 'S',
                 'A', 'D', 'E', 'E');
-            Solution.Exist(Board.Table, "SEE").Should().BeTrue();
+            Solution.Exist(Board.Matrix, "SEE").Should().BeTrue();
         }   
         
         [Fact]
@@ -53,7 +53,7 @@ namespace Challenge.Leet.July.WordSearch
             Board.FillTable(2, 
                 'a', 'b', 
                 'c', 'd');
-            Solution.Exist(Board.Table, "abcd").Should().BeFalse();
+            Solution.Exist(Board.Matrix, "abcd").Should().BeFalse();
         }
     }
 }

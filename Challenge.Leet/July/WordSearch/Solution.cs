@@ -61,6 +61,7 @@ namespace Challenge.Leet.July.WordSearch
 
             return false;
 
+            // ToDo : Fix and Optimize
             bool Check(int rowIndex, int colIndex, int charIndex)
             {
                 Debug.WriteLine(word.Substring(0, charIndex));
