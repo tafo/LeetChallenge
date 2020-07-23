@@ -55,47 +55,30 @@ namespace Challenge.Leet.July.WordSearch
                 for (var y = 0; y < colSize; y++)
                 {
                     if (board[x][y] != word[0]) continue;
-                    if (word.Length == 1 || Check(x, y, 1)) return true;
+                    if (word.Length == 1 || Found(x, y, 1)) return true;
                 }
             }
 
             return false;
 
             // ToDo : Fix and Optimize
-            bool Check(int rowIndex, int colIndex, int charIndex)
+            bool Found(int rowIndex, int colIndex, int charIndex)
             {
                 Debug.WriteLine(word.Substring(0, charIndex));
 
                 visited[rowIndex, colIndex] = true;
 
-                if (rowIndex > 0 && Found(rowIndex - 1, colIndex, charIndex))
-                {
-                    return true;
-                }
-
-                if (rowIndex + 1 < rowSize && Found(rowIndex + 1, colIndex, charIndex))
-                {
-                    return true;
-                }
-
-                if (colIndex > 0 && Found(rowIndex, colIndex - 1, charIndex))
-                {
-                    return true;
-                }
-
-                if (colIndex + 1 < colSize && Found(rowIndex, colIndex + 1, charIndex))
-                {
-                    return true;
-                }
+                if (rowIndex > 0 && Check(rowIndex - 1, colIndex, charIndex)) return true;
+                if (rowIndex + 1 < rowSize && Check(rowIndex + 1, colIndex, charIndex)) return true;
+                if (colIndex > 0 && Check(rowIndex, colIndex - 1, charIndex)) return true;
+                if (colIndex + 1 < colSize && Check(rowIndex, colIndex + 1, charIndex)) return true;
 
                 visited[rowIndex, colIndex] = false;
 
                 return false;
 
-                bool Found(int x, int y, int i)
-                    => !visited[x, y]
-                       && board[x][y] == word[i]
-                       && (i + 1 == word.Length || Check(x, y, i + 1));
+                bool Check(int x, int y, int i) =>
+                    !visited[x, y] && board[x][y] == word[i] && (i + 1 == word.Length || Found(x, y, i + 1));
             }
         }
     }
