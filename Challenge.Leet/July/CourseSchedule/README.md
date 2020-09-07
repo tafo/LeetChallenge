@@ -1,5 +1,3 @@
-# [Home](../README.md)
-
 **Playing with objects**
 
 ```csharp
