@@ -7,6 +7,7 @@ namespace Challenge.Leet.September.WordPattern
     {
         /// <summary>
         /// The fastest Solution in C#.
+        /// Time Complexity is O(n).
         /// </summary>
         public bool WordPattern(string pattern, string str)
         {
