@@ -5,46 +5,34 @@ namespace Challenge.Leet.September.WordPattern
 {
     public class Solution
     {
+        /// <summary>
+        /// The fastest Solution in C#.
+        /// </summary>
         public bool WordPattern(string pattern, string str)
         {
             var terms = str.Trim().Split(' ').Where(x => x.Length > 0).ToArray();
             if (pattern.Length != terms.Length) return false;
 
-            var output = true;
-
-            var patternDictionary = new Dictionary<char, int>();
-            var termSet = new HashSet<string>();
+            var dictionary = new Dictionary<char, string>();
             for (var i = 0; i < pattern.Length; i++)
             {
                 var character = pattern[i];
                 var term = terms[i];
-                if (patternDictionary.ContainsKey(character))
+                if (dictionary.ContainsKey(character))
                 {
-                    var index = patternDictionary[character];
-                    if (terms[index] == term)
-                    {
-                        patternDictionary[character] = i;
-                    }
-                    else
-                    {
-                        output = false;
-                        break;
-                    }
+                    if (dictionary[character] == term) continue;
+                    return false;
                 }
-                else
-                {
-                    patternDictionary.Add(character, i);
-                    if (termSet.Contains(term))
-                    {
-                        output = false;
-                        break;
-                    }
 
-                    termSet.Add(term);
+                if (dictionary.Values.Contains(term))
+                {
+                    return false;
                 }
+
+                dictionary.Add(character, term);
             }
 
-            return output;
+            return true;
         }
     }
 }

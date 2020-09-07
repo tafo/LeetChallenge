@@ -31,6 +31,7 @@ namespace Challenge.Leet.September.WordPattern
                 new object[]{"", "cat", false},
                 new object[]{"a", "", false},
                 new object[]{"ab", "cat cat", false},
+                new object[]{"aa", "cat cat", true},
                 new object[]{"abba", "dog cat cat dog", true},
                 new object[]{"abba", "dog cat cat fish", false},
                 new object[]{"aaaa", "dog cat cat dog", false},
