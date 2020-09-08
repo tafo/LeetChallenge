@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using FluentAssertions;
 using Xunit;
@@ -19,7 +20,10 @@ namespace Challenge.Leet.September.WordPattern
         public void Check(string pattern, string terms, bool output)
         {
             var solution = new Solution();
+            var timer = Stopwatch.StartNew();
             solution.WordPattern(pattern, terms).Should().Be(output);
+            timer.Stop();
+            _outputHelper.WriteLine($"{timer.ElapsedTicks}");
         }
 
         [SuppressMessage("ReSharper", "StringLiteralTypo")]

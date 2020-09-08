@@ -6,6 +6,7 @@ namespace Challenge.Leet.September.WordPattern
     public class Solution
     {
         /// <summary>
+        /// https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/554/week-1-september-1st-september-7th/3451/
         /// The fastest Solution in C#.
         /// Time Complexity is O(n).
         /// </summary>
