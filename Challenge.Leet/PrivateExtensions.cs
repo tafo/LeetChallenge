@@ -49,11 +49,11 @@ namespace Challenge.Leet
                     }
 
                     if (++i == values.Length) return root;
-                    if (values[i].HasValue)
-                    {
-                        parent.right = new TreeNode(values[i].Value);
-                        parentNodes.Add(parent.right);
-                    }
+                    
+                    if (!values[i].HasValue) continue;
+                    
+                    parent.right = new TreeNode(values[i].Value);
+                    parentNodes.Add(parent.right);
                 }
             }
 
