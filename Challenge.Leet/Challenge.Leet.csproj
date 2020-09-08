@@ -23,4 +23,23 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="September\GetAllElements\README.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>README.md</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="September\GetAllElements\README.md">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>README.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
 </Project>
