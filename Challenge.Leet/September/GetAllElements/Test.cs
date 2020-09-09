@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using FluentAssertions;
-using Microsoft.Diagnostics.Runtime.Interop;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -18,7 +17,7 @@ namespace Challenge.Leet.September.GetAllElements
 
         [Theory]
         [MemberData(nameof(InputAndOutput))]
-        public void Check(TreeNode root1, TreeNode root2, List<int> expectedOutput)
+        public void CheckRecursive(TreeNode root1, TreeNode root2, List<int> expectedOutput)
         {
             var solution = new Solution();
             var timer = Stopwatch.StartNew();
