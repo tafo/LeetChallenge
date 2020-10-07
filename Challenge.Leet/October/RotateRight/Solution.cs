@@ -1,14 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Challenge.Leet.Common;
 
 namespace Challenge.Leet.October.RotateRight
 {
     public class Solution
     {
-        [SuppressMessage("ReSharper", "IntDivisionByZero")]
-        [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         public ListNode RotateRight(ListNode head, int k)
         {
             if (head == null) return null;
@@ -28,7 +24,7 @@ namespace Challenge.Leet.October.RotateRight
 
             if (k == 0) return head;
 
-            nodeList.Last().next = head;
+            nodeList[^1].next = head;
 
             nodeList[^(k + 1)].next = null;
             return nodeList[^k];
