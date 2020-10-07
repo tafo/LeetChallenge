@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Challenge.Leet.Helper;
 using FluentAssertions;
 using Xunit;
 
@@ -49,7 +50,7 @@ namespace Challenge.Leet.August.PathSum
         [InlineData(new[] { 1, -2, -3, 1, 3, -2, int.MaxValue, -1 }, -2, 4)]
         public void Check(int[] values, int sum, int expectedOutput)
         {
-            var root = TreeNode.Load(values);
+            var root = TreeNodeHelper.Load(values);
             var solution = new Solution();
             solution.Process(root, sum).Should().Be(expectedOutput);
         }

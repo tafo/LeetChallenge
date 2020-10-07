@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Challenge.Leet.Helper;
 using FluentAssertions;
 using Xunit;
 
@@ -82,7 +83,7 @@ namespace Challenge.Leet.August.VerticalTraversal
                 new List<int>(d),
                 new List<int>(e)
             };
-            var root = TreeNode.Load(values);
+            var root = TreeNodeHelper.Load(values);
             var solution = new Solution();
             solution.Run(root).Should().BeEquivalentTo(expectedOutput);
         }
