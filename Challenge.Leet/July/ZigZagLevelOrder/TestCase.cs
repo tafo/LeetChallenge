@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Challenge.Leet.Common;
 
 namespace Challenge.Leet.July.ZigZagLevelOrder
 {

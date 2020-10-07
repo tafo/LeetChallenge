@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Challenge.Leet.Common;
 using FluentAssertions.Collections;
 
 namespace Challenge.Leet

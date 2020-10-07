@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Challenge.Leet.Common;
 using Challenge.Leet.Helper;
 using FluentAssertions;
 using Xunit;

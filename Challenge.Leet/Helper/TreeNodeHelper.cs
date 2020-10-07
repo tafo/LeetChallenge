@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Challenge.Leet.Common;
 
 namespace Challenge.Leet.Helper
 {

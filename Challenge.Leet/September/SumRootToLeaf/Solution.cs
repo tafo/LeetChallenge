@@ -1,4 +1,6 @@
-﻿namespace Challenge.Leet.September.SumRootToLeaf
+﻿using Challenge.Leet.Common;
+
+namespace Challenge.Leet.September.SumRootToLeaf
 {
     public class Solution
     {

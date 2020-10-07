@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Challenge.Leet.Common;
 
 namespace Challenge.Leet.September.GetAllElements
 {

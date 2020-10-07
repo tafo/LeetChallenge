@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using Challenge.Leet.Common;
 using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
