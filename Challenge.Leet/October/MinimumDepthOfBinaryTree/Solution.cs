@@ -3,6 +3,9 @@ using Challenge.Leet.Common;
 
 namespace Challenge.Leet.October.MinimumDepthOfBinaryTree
 {
+    /// <summary>
+    /// https://leetcode.com/explore/challenge/card/october-leetcoding-challenge/562/week-4-october-22nd-october-28th/3504/
+    /// </summary>
     public class Solution
     {
         public int MinDepth(TreeNode root)
