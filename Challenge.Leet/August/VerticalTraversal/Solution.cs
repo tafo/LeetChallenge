@@ -24,6 +24,7 @@ namespace Challenge.Leet.August.VerticalTraversal
     [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
     public class Solution
     {
+        [SuppressMessage("ReSharper", "SuspiciousTypeConversion.Global")]
         public IList<IList<int>> Run(TreeNode root)
         {
             var coordinates = new List<Coordinate>{new Coordinate(0, 0, root.val)};
