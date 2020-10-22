@@ -10,6 +10,40 @@ namespace Challenge.Leet.October.AsteroidCollision
     /// </summary>
     public class Solution
     {
+        public int[] AsteroidCollisionWithoutStack(int[] asteroids)
+        {
+            for (var i = 0; i < asteroids.Length; i++)
+            {
+                var asteroid = asteroids[i];
+                if (asteroid >= 0) continue;
+                var k = i;
+                do
+                {
+                    k--;
+                } while (k >= 0 && asteroids[k] <= 0);
+
+                if (k < 0) continue;
+
+                if (asteroids[k] > Math.Abs(asteroids[i]))
+                {
+                    asteroids[i] = 0;
+                }
+                else if (asteroids[k] < Math.Abs(asteroids[i]))
+                {
+                    asteroids[k] = 0;
+                    i--;
+                }
+                else
+                {
+                    asteroids[i] = 0;
+                    asteroids[k] = 0;
+                    i--;
+                }
+            }
+
+            return asteroids.Where(x => x != 0).ToArray();
+        }
+
         public int[] AsteroidCollision(int[] asteroids)
         {
             var asteroidStack = new Stack<int>();
