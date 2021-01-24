@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="C:\Users\Tafo\.nuget\packages\microsoft.diagnostics.tracing.traceevent\2.0.49\build\..\lib\native\amd64\KernelTraceControl.dll" />
+    <None Remove="C:\Users\Tafo\.nuget\packages\microsoft.diagnostics.tracing.traceevent\2.0.49\build\..\lib\native\amd64\msdia140.dll" />
+    <None Remove="C:\Users\Tafo\.nuget\packages\microsoft.diagnostics.tracing.traceevent\2.0.49\build\..\lib\native\x86\KernelTraceControl.dll" />
+    <None Remove="C:\Users\Tafo\.nuget\packages\microsoft.diagnostics.tracing.traceevent\2.0.49\build\..\lib\native\x86\KernelTraceControl.Win61.dll" />
+    <None Remove="C:\Users\Tafo\.nuget\packages\microsoft.diagnostics.tracing.traceevent\2.0.49\build\..\lib\native\x86\msdia140.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
@@ -18,13 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="July\CourseSchedule\Data\*.*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Twenty\July\CourseSchedule\Data\pres.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="September\GetAllElements\README.cs">
+    <None Include="Twenty\September\GetAllElements\README.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>README.md</DependentUpon>
@@ -32,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="September\GetAllElements\README.md">
+    <None Update="Twenty\September\GetAllElements\README.md">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>README.cs</LastGenOutput>
     </None>

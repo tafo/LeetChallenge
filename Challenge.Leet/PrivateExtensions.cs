@@ -76,5 +76,39 @@ namespace Challenge.Leet
 
             return sb.ToString();
         }
+
+        public static ListNode CreateLinkedList(this IEnumerable<int> numbers)
+        {
+            ListNode head = null;
+            ListNode current = null;
+            foreach (var number in numbers)
+            {
+                if (head == null)
+                {
+                    head = new ListNode(number);
+                    current = head;
+                }
+                else
+                {
+                    current.next = new ListNode(number);
+                    current = current.next;
+                }
+            }
+
+            return head;
+        }
+
+        public static IEnumerable<int> ToList(this ListNode node)
+        {
+            if (node == null) return null;
+            var output = new List<int>();
+            while (node != null)
+            {
+                output.Add(node.val);
+                node = node.next;
+            }
+
+            return output;
+        }
     }
 }
